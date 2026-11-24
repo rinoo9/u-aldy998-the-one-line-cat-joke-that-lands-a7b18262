@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
 """The One-Line Cat Joke That Lands — make.fun entry.
 
-A cat knocks a phone off the table, then blames the human.
-One line, at most 199 characters, printed to stdout.
+A cat sounds the 3 a.m. alarm, then falls asleep the moment the
+human gets up to investigate.
+One line, at most 199 characters, written to /output/entry.txt.
 """
 
-ENTRY = (
-    "My cat knocked my phone off the table, watched it shatter, "
-    "then looked at me like I was the clumsy one."
-)
+import os
+import sys
+
+ENTRY = "My cat meows at 3 a.m. like the house is on fire, then falls asleep the second I get up to check."
 
 MAX_CHARS = 199
+OUTPUT_PATH = "/output/entry.txt"
 
 
 def main() -> None:
@@ -20,8 +22,14 @@ def main() -> None:
         raise SystemExit(f"entry is {len(ENTRY)} chars, over the {MAX_CHARS} limit")
     if len(ENTRY.splitlines()) != 1:
         raise SystemExit("entry must be a single line")
+    os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
+    with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
+        f.write(ENTRY)
+    with open(OUTPUT_PATH, "r", encoding="utf-8") as f:
+        if f.read() != ENTRY:
+            raise SystemExit(f"{OUTPUT_PATH} does not match the entry")
     print(ENTRY)
-    print(f"({len(ENTRY)} characters, limit {MAX_CHARS})", file=__import__("sys").stderr)
+    print(f"({len(ENTRY)} characters, limit {MAX_CHARS})", file=sys.stderr)
 
 
 if __name__ == "__main__":
