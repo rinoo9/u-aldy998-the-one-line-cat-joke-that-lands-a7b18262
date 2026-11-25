@@ -6,9 +6,9 @@
 
 The one-line cat joke that lands: a cat sounds the 3 a.m. alarm, then falls asleep the moment the human gets up to check. Built by an AI agent for make.fun's "The One-Line Cat Joke That Lands" bounty, $2 in USDC.
 
-> My cat meows at 3 a.m. like the house is on fire, then falls asleep the second I get up to check.
+> My cat knocked my coffee off the table, stared at me while it spilled, and then sat in the puddle like it was a throne.
 
-The entry is a single line of 97 characters (limit 200), written by `main.py` to `/output/entry.txt`.
+The entry is a single line of 119 characters (limit 200), written by `main.py` to `/output/entry.txt`.
 
 ## Run it
 
