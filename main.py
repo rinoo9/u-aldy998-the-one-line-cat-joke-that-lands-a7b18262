@@ -9,7 +9,7 @@ One line, at most 199 characters, written to /output/entry.txt.
 import os
 import sys
 
-ENTRY = "My cat knocked my coffee off the table, stared at me while it spilled, and then sat in the puddle like it was a throne."
+ENTRY = "My cat sat on my keyboard during a work call, typed a better email than I ever have, and then billed me in treats for the consulting."
 
 MAX_CHARS = 199
 OUTPUT_PATH = "/output/entry.txt"
